@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Золотой риэлтор</title>
+    <link rel="stylesheet" type="text/css" href="/site/styles.css">
+    <link rel="stylesheet" type="text/css" href="/site/adaptive.css">
+</head>
+<body>
+    <div class="header">
+        <div class="buttons-container">
+            <button class="about-button">О нас</button>
+            <span class="divider">|</span>
+            <button class="contact-button">+7 (963) 765-91-61</button>
+        </div>
+    </div>
+
+    <div class="panel"></div>
+    <div class="panel-2">
+      <a href="index.html">
+        <button class="logo-button">
+            <img src="/site/img/log.png" alt="Логотип" class="logo">
+        </button>
+      </a>
+        <div class="button-container">
+            <a href="/site/kupit/buy.html"><button class="panel-button">Купить</button></a>
+            <a href="/site/sell/sell.html"><button class="panel-button">Продать</button></a>
+            <a href="/site/contacts/contacts.html"><button class="panel-button">Контакты</button></a>
+        </div>
+    </div>
+
+    <div><h3 style="margin-left: 300px; color: #1E90FF; font-size: 50px;">Мы действительно разбираемся в недвижимости!</h3></div>
+    <div><h1 style="margin-left: 300px; margin-top: -10px; font-size: 20px; color: #ddc022;">Золотой риэлтор</h1></div>
+    <div class="right-section">
+        <div class="button-wrapper">
+            <a href="/site/map/map.html"><button class="left-button">Найти подходящий вариант на карте</button></a>
+            <a href="/site/kupit/buy.html"><button class="left-button">Доступно к продаже</button></a>
+        </div>
+        <div class="photo-wrapper">
+            <img src="/site/img/dom.png" alt="Фотография" class="photo">
+        </div>
+    </div>
+    <div id="dialog-overlay" class="dialog-overlay">
+      <div class="dialog-header">
+          <button id="close-dialog" class="close-button">Закрыть</button>
+      </div>
+      <div class="dialog-content">
+          <div class="message">
+              <img class="avatar" src="/site/img/konsultant.png" alt="Иван">
+              <div class="message-text">
+                  <p class="name">Иван</p>
+                  <p>Добрый день, могу ли я вам как-нибудь помочь?</p>
+              </div>
+          </div>
+          <a href="/site/sell/sell.html"><button class="button-accept">Записаться на консультацию</button></a>
+      </div>
+  </div>
+  <audio id="sound">
+    <source src="/site/sound/sound.mp3" type="audio/mpeg">
+</audio>
+    <div class="services">
+      <h3 style="color: #1E90FF; font-size: 30px; margin-left: -2.5em; margin-bottom: 1em;">Операции с недвижимостью</h1>
+      
+      <div class="button-row">
+        <a href="/site/kupit/buy.html"><button class="service-button">
+            <img src="/site/img/buy.png" alt="" class="button-icon">
+            Купить
+        </button>
+      </a>
+        <a href="/site/sell/sell.html"><button class="service-button2">
+            <img src="/site/img/sell.jpg" alt="" class="button-icon">
+            Продать
+        </button>
+      </a>
+    </div>
+    </div>
+    <hr class="hr">
+<div class="calc">
+  <div class="calc-panel">
+    <h1 class="title">Калькулятор оценки недвижимости</h1>
+
+    <label for="location" class="label">Расположение:</label>
+    <select id="location" class="input-field">
+      <option value="center">Центр</option>
+      <option value="outskirts">Окраины</option>
+    </select>
+  </div>
+
+  <label for="houseType" class="label">Тип дома:</label>
+  <select id="houseType" class="input-field" onchange="toggleQuestions()">
+    <option value="multifamily">Многоквартирный</option>
+    <option value="singlefamily">Частный</option>
+  </select>
+
+  <div id="multifamilyQuestions" class="calc-panel">
+    <label for="area" class="label">Общая площадь квартиры (кв. м):</label>
+    <input type="number" id="area" class="input-field">
+
+    <label for="rooms" class="label">Количество комнат:</label>
+    <select id="rooms" class="input-field">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4+">4+</option>
+    </select>
+
+    <label for="condition" class="label">Состояние квартиры:</label>
+    <select id="condition" class="input-field">
+      <option value="noRepair">Не требует ремонта</option>
+      <option value="noFinishing">Без отделки</option>
+      <option value="euroRepair">Евро ремонт</option>
+    </select>
+  </div>
+
+  <div id="singlefamilyQuestions" class="calc-panel">
+    <label for="houseFloors" class="label">Этажность дома:</label>
+    <select id="houseFloors" class="input-field">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+
+    <label for="houseRooms" class="label">Количество комнат:</label>
+    <select id="houseRooms" class="input-field">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4+">4+</option>
+    </select>
+
+    <label for="houseArea" class="label">Площадь дома (кв. м):</label>
+    <input type="number" id="houseArea" class="input-field">
+
+    <label for="landArea" class="label">Площадь участка (кв. м):</label>
+    <input type="number" id="landArea" class="input-field">
+  </div>
+
+  <label for="currency" class="label">Валюта оценки:</label>
+  <select id="currency" class="input-field">
+    <option value="RUB">RUB</option>
+    <option value="USD">USD</option>
+    <option value="EUR">EUR</option>
+  </select>
+
+  <div class="calc-panel">
+    <button onclick="calculate()" class="button">Рассчитать</button>
+  </div>
+
+  <div id="result" class="result"></div>
+</div>
+
+
+
+    <div class="reviews">
+      <h3 class="heading" style="color: #1E90FF; font-size: 50px; margin-left: 5em;">Отзывы наших клиентов</h3>
+      <a href="/site/reviews/reviews.html"><button class="all-reviews-button">Все отзывы</button></a>
+    </div>
+
+    <div class="wrapper">
+      <input type="radio" name="point" id="slide1" checked>
+      <input type="radio" name="point" id="slide2">
+      <input type="radio" name="point" id="slide3">
+      <input type="radio" name="point" id="slide4">
+      <input type="radio" name="point" id="slide5">
+      <div class="slider">
+        <div class="slides slide1">
+          <div class="user">
+            <h3 style="margin-top: 2em; margin-left: 4em; margin-bottom: -3em; color: #1E90FF;">Анна</h3>
+            <img src="/site/img/user.png" alt="" style="max-width: 50px; margin-left: 1em; margin-top: 1em;">
+          </div>
+          <h1 class="review">Квартира находится в хорошем районе, рядом с метро и магазинами. Ремонт сделан качественно, все коммуникации работают исправно. Цена соответствует качеству. Я очень довольна своей покупкой!</h1>
+        </div>
+        <div class="slides slide2">
+          <div class="user">
+            <h3 style="margin-top: 2em; margin-left: 4em; margin-bottom: -3em; color: #1E90FF;">Иван</h3>
+            <img src="/site/img/user.png" alt="" style="max-width: 50px; margin-left: 1em; margin-top: 1em;">
+          </div>
+          <h1 class="review">Я долго искал подходящую квартиру, и моя покупка у вас оказалась полным успехом. Район удобный, все необходимые объекты находятся рядом. Квартира отлично оформлена и ухожена. Рекомендую вас всем своим друзьям и знакомым!</h1>
+        </div>
+        <div class="slides slide3">
+          <div class="user">
+            <h3 style="margin-top: 2em; margin-left: 4em; margin-bottom: -3em; color: #1E90FF;">Мария</h3>
+            <img src="/site/img/user.png" alt="" style="max-width: 50px; margin-left: 1em; margin-top: 1em;">
+          </div>
+          <h1 class="review">Спасибо вам за отличную работу! Я долго искала свою мечтаную квартиру, и вы помогли мне найти идеальный вариант. Команда профессионалов, которая всегда готова помочь и ответить на все вопросы. Квартира превзошла все мои ожидания.</h1>
+        </div>
+        <div class="slides slide4">
+          <div class="user">
+            <h3 style="margin-top: 2em; margin-left: 4em; margin-bottom: -3em; color: #1E90FF;">Алексей</h3>
+            <img src="/site/img/user.png" alt="" style="max-width: 50px; margin-left: 1em; margin-top: 1em;">
+          </div>
+          <h1 class="review">Покупка квартиры через вашу компанию была простой и безопасной. Весь процесс был хорошо организован, и я получил отличную поддержку от вашей команды. Квартира в прекрасном состоянии, и я рад, что сделал выбор в пользу вашей компании.</h1>
+        </div>
+        <div class="slides slide5">
+          <div class="user">
+            <h3 style="margin-top: 2em; margin-left: 4em; margin-bottom: -3em; color: #1E90FF;">Елена</h3>
+            <img src="/site/img/user.png" alt="" style="max-width: 50px; margin-left: 1em; margin-top: 1em;">
+          </div>
+          <h1 class="review">Я хотела бы поблагодарить вашу компанию за помощь в покупке моей мечты. Квартира превзошла все мои ожидания, и я не могу быть счастливее. Весь процесс прошел гладко, и я получила отличное обслуживание. Спасибо вам за вашу преданность и профессионализм!</h1>
+        </div>
+      </div>	
+      <div class="controls">
+        <label for="slide1"></label>
+        <label for="slide2"></label>
+        <label for="slide3"></label>
+        <label for="slide4"></label>
+        <label for="slide5"></label>
+      </div>
+    </div>
+    <script src="./site/index.js"></script>
+
+    <div class="help">
+      <h3 style="color: #1E90FF; font-size: 50px; margin-bottom: 1em;">Остались вопросы?</h3>
+      <a href="/site/contacts/contacts.html"><button class="to-contacts">Свяжитесь с нами</button></a>
+    </div>
+    <footer style="background-color: gray; height: 10em; margin-top: 5em; width: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+      <p style="text-align: center; font-size: 1.5em; margin-bottom: 0.5em;">Подписывайтесь на нас в социальных сетях:</p>
+      <ul style="list-style: none; display: flex; justify-content: center; flex-wrap: wrap;">
+        <div class="social telegram">
+          <a href="https://web.telegram.org/" target="_blank">
+            <svg role="img" viewBox="0 0 448 512">
+              <path fill="currentColor" d="M446.7 98.6l-67.6 318.8c-5.1 22.5-18.4 28.1-37.3 17.5l-103-75.9-49.7 47.8c-5.5 5.5-10.1 10.1-20.7 10.1l7.4-104.9 190.9-172.5c8.3-7.4-1.8-11.5-12.9-4.1L117.8 284 16.2 252.2c-22.1-6.9-22.5-22.1 4.6-32.7L418.2 66.4c18.4-6.9 34.5 4.1 28.5 32.2z"/>
+            </svg>
+          </a>
+        </div>
+        <div class="social vk">
+          <a href="https://vk.com/" target="_blank">
+            <svg role="img" viewBox="0 0 576 512">
+              <path fill="currentColor" d="M545 117.7c3.7-12.5 0-21.7-17.8-21.7h-58.9c-15 0-21.9 7.9-25.6 16.7 0 0-30 73.1-72.4 120.5-13.7 13.7-20 18.1-27.5 18.1-3.7 0-9.4-4.4-9.4-16.9V117.7c0-15-4.2-21.7-16.6-21.7h-92.6c-9.4 0-15 7-15 13.5 0 14.2 21.2 17.5 23.4 57.5v86.8c0 19-3.4 22.5-10.9 22.5-20 0-68.6-73.4-97.4-157.4-5.8-16.3-11.5-22.9-26.6-22.9H38.8c-16.8 0-20.2 7.9-20.2 16.7 0 15.6 20 93.1 93.1 195.5C160.4 378.1 229 416 291.4 416c37.5 0 42.1-8.4 42.1-22.9 0-66.8-3.4-73.1 15.4-73.1 8.7 0 23.7 4.4 58.7 38.1 40 40 46.6 57.9 69 57.9h58.9c16.8 0 25.3-8.4 20.4-25-11.2-34.9-86.9-106.7-90.3-111.5-8.7-11.2-6.2-16.2 0-26.2.1-.1 72-101.3 79.4-135.6z"/>
+            </svg>
+          </a>
+        </div>
+      </ul>
+    </footer>
+</body>
+</html>
