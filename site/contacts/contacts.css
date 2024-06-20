@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --index: calc(1vw + 1vh);
+}
+
+@font-face {
+  font-family: better-vcr;
+  src: url(../contacts/fonts/better-vcr_0.ttf);
+}
+
+body {
+  width: 100%;
+}
+
+.main-header {
+  position: relative;
+}
+
+.layer__header {
+  position: relative;
+  text-align: center;
+}
+
+p {
+  position: absolute;
+  width: 100%;
+  font-family: better-vcr;
+}
+
+.number {
+  bottom: calc(var(--index) * 15);
+  color: #8b4cff;
+}
+
+.layers__caption {
+  font-size: calc(var(--index) / 1.175);
+  letter-spacing: calc(var(--index) / 3.5);
+
+  margin-top: calc(var(--index) * -.75);
+  bottom: calc(var(--index) * 13.25);
+
+  color: #d0ccf5;
+  text-decoration: none;
+}
+
+.layers__caption:hover {
+  color: #7f73e8;
+}
+
+.layers__title {
+  font-size: calc(var(--index) * 1.5);
+  letter-spacing: calc(var(--index) / 2.25);
+  bottom: calc(var(--index) * 11);
+  color: #b3adee;
+}
+
+.icons {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+  margin-top: calc(var(--index) * 25.35);
+}
+
+img {
+  position: relative;
+  width: calc(var(--index) * 2.25);
+}
+
+
